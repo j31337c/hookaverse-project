@@ -1,0 +1,3 @@
+[submodule "hookfi-contracts/lib/forge-std"]
+	path = hookfi-contracts/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
