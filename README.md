@@ -66,6 +66,20 @@ $ forge init hookfi-contracts
 $ cd hookfi-contracts
 ```
 
+- Clone Uniswap v4 templete for Hook development:
+
+```shell
+git clone https://github.com/Uniswap/v4-template ../uniswap-v4-template
+cp -r ../uniswap-v4-template/src/* src/
+cp -r ../uniswap-v4-template/test/* test/
+```
+
+- Install Foundry dependencies (e.g., OpenZeppelin, Uniswap v4):
+
+```shell
+forge install OpenZeppelin/openzeppelin-contracts Uniswap/v4-core Uniswap/v4-periphery
+```
+
 ### Set Up Environment Variables
 Create .env.local in the Next.js project (hookaverse/) for frontend variables:
 
