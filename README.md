@@ -1,10 +1,10 @@
 ## Hookaverse
 
-** Hookaverse is a broader ecosystem or frontend for HookFi built with Next.js
+**Hookaverse is a broader ecosystem or frontend for HookFi built with Next.js**
 
 Hookaverse Developer Environment:
 
-- **Foundry**: Used for developing and testing smart contracts (e.g. the OnsidedUSDCHook)
+- **Foundry**: Used for developing and testing smart contracts (e.g. the OnesidedUSDCHook)
 - **Next.js**: Manages the frontend, integration with HookFi's API or contracts for token issuance and pool creation.
 - **Base Network**: The target blockchain (as HookFi/Flaunch operates on Base Eth)
 
@@ -63,4 +63,30 @@ Create a Foundry project for HookFi smart contracts (e.g., the OneSidedUSDCHook)
 ```shell
 $ cd ..  # Move to parent directory of hookaverse
 $ forge init hookfi-contracts
+$ cd hookfi-contracts
+```
+
+### Set Up Environment Variables
+Create .env.local in the Next.js project (hookaverse/) for frontend variables:
+
+```shell
+NEXT_PUBLIC_BASE_RPC_URL=https://sepolia.base.org  # or your Infura/Alchemy URL
+NEXT_PUBLIC_FACTORY_ADDRESS=0x...  # Your OneClickUSDCFactory address (after deployment)
+NEXT_PUBLIC_HOOKFI_API_URL=https://api.hookfi.gg  # Hypothetical HookFi API
+NEXT_PUBLIC_USDC_ADDRESS=0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913  # Base USDC
+```
+
+Create .env in the Foundry project (hookfi-contracts/) for contract deployment:
+
+```shell
+ASE_SEPOLIA_RPC_URL=https://sepolia.base.org
+PRIVATE_KEY=0x...  # Your wallet private key (never commit to Git)
+```
+
+Secure .env files:
+
+```shell
+echo ".env" >> hookfi-contracts/.gitignore
+echo ".env.local" >> hookaverse/
+.gitignore
 ```
