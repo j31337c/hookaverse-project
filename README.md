@@ -87,6 +87,33 @@ Secure .env files:
 
 ```shell
 echo ".env" >> hookfi-contracts/.gitignore
-echo ".env.local" >> hookaverse/
-.gitignore
+echo ".env.local" >> hookaverse/.gitignore
 ```
+
+### Implement Smart Contracts
+
+Create `OneSidedUSDCHook` and `OneClickUSDCFactory` in `hookfi-contracts/src/`:
+
+- `src/OneSidedUSDCHook.sol`: Supports one-sided USDC liquidity and LP-only swaps.
+
+- `src/OneClickUSDCFactory.sol`: Deploys the hook and initializes the token/USDC pool.
+
+Create a test file in `test/OneSidedUSDCHook.t.sol`:
+
+Compile and test contracts:
+
+```shell
+$ cd hookfi-contracts
+$ forge build
+$ forge test
+```
+
+### Implement Next.js Frontend
+Update the Next.js project to integrate with HookFi and the custom hook. 
+
+- Utility File: Create `hookaverse/src/lib/hookfi.js`:
+
+- Component: Create `hookaverse/src/components/LaunchForm.js`:
+
+- Page: Update `hookaverse/src/app/page.js`:
+
