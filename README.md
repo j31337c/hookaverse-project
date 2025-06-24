@@ -33,7 +33,7 @@ $ yarn -v  # Should output 1.x.x
 ### Install Rust and Foundry
 Foundry is written in Rust, so install Rust first, then Foundry:
 
-# Install Rust
+### Install Rust
 
 ```shell
 $ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -41,7 +41,7 @@ $ source $HOME/.cargo/env
 $ rustc --version  # Should output rustc 1.x.x
 ```
 
-# Install Foundry
+### Install Foundry
 
 ```shell
 $ curl -L https://foundry.paradigm.xyz | bash
@@ -50,13 +50,13 @@ $ forge --version  # Should output forge 0.x.x
 $ cast --version   # Should output cast 0.x.x
 ```
 
-# Install additional dependencies for Web3 and API integration:
+### Install additional dependencies for Web3 and API integration:
 
 ```shell
 $ yarn add axios ethers wagmi viem @wagmi/core @wagmi/connectors
 ```
 
-# Initialize a Foundry Project
+### Initialize a Foundry Project
 Create a Foundry project for HookFi smart contracts (e.g., the OneSidedUSDCHook) within the same repository:
 
 
