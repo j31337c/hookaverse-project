@@ -66,10 +66,10 @@ $ forge init hookfi-contracts
 $ cd hookfi-contracts
 ```
 
-- Clone Uniswap v4 templete for Hook development:
+- Clone Uniswap v4 templete for Hook development: <-Shouldn't be required as templates install via forge init!?->
 
 ```shell
-git clone https://github.com/Uniswap/v4-template ../uniswap-v4-template
+git clone https://github.com/Uniswapfoundation/v4-template ../uniswap-v4-template
 cp -r ../uniswap-v4-template/src/* src/
 cp -r ../uniswap-v4-template/test/* test/
 ```
@@ -93,7 +93,7 @@ NEXT_PUBLIC_USDC_ADDRESS=0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913  # Base USDC
 Create .env in the Foundry project (hookfi-contracts/) for contract deployment:
 
 ```shell
-ASE_SEPOLIA_RPC_URL=https://sepolia.base.org
+BASE_SEPOLIA_RPC_URL=https://sepolia.base.org
 PRIVATE_KEY=0x...  # Your wallet private key (never commit to Git)
 ```
 

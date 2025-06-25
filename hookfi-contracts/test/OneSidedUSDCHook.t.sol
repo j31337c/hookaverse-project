@@ -3,7 +3,7 @@ pragma solidity ^0.8.24;
 
 import "forge-std/Test.sol";
 import "../src/OneSidedUSDCHook.sol";
-import "@uniswap/v4-core/src/interfaces/IPoolManager.sol";
+import "v4-core/src/interfaces/IPoolManager.sol";
 
 contract OneSidedUSDCHookTest is Test {
     OneSidedUSDCHook hook;
